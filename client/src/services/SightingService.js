@@ -6,11 +6,12 @@ export default {
     .then(res => res.json())
   },
   postSighting(payload){
-    return fetch(baseUrl, {
+    return fetch(baseURL, {
       method: 'POST',
       body: JSON.stringify(payload),
       headers: { 'Content-type': 'application/json'}
     })
+    .then(res => res.json())
   }
 
 }
